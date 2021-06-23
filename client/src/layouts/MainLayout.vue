@@ -8,7 +8,8 @@
       id="sidebar"
       v-model="leftDrawerOpen"
       show-if-above
-      content-class="sidebar bg-grey-1"
+      :width="200"
+      content-class="sidebar"
     >
       <q-scroll-area class="sidebar-nav">
         <q-list>
@@ -25,13 +26,26 @@
           </q-item>
           <q-item
             v-ripple
-            to="/account/profile"
+            to="/account/"
+            exact
           >
             <q-item-section avatar>
               <q-icon name="account_circle" />
             </q-item-section>
             <q-item-section>
               {{ $t("header.account_link") }}
+            </q-item-section>
+          </q-item>
+          <q-item
+            v-ripple
+            to="/account/profile"
+            exact
+          >
+            <q-item-section avatar>
+              <q-icon name="contact_mail" />
+            </q-item-section>
+            <q-item-section>
+              {{ $t("header.profile_link") }}
             </q-item-section>
           </q-item>
           <q-item
@@ -59,16 +73,17 @@
         </q-list>
       </q-scroll-area>
 
-      <q-img
+      <div
         role="presentation"
         class="sidebar-avatar absolute-top"
-        src="https://cdn.quasar.dev/img/material.png"
+        style="border-right: 1px solid #3d47ca"
       >
         <avatar-block
+          style="padding: 16px;"
           :user="currentUser"
           class="absolute-bottom bg-secondary"
         />
-      </q-img>
+      </div>
     </q-drawer>
 
     <q-page-container>
@@ -108,6 +123,8 @@ export default {
   $avatar-height: 150px
   .sidebar-avatar
     height: $avatar-height
+    background-color: $primary
+    color: white
   .sidebar-nav
     height: calc(100% - #{$avatar-height})
     margin-top: $avatar-height

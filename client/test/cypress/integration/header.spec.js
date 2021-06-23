@@ -24,7 +24,7 @@ describe('Header', () => {
         });
 
         cy.dataCy('headerUserMenu').within(() => {
-            cy.contains('My Account').should('have.attr', 'href', '/account/profile');
+            cy.contains('My Account').should('have.attr', 'href', '/account');
             cy.contains('Dashboard').should('have.attr', 'href', '/dashboard');
             cy.contains('Logout').click();
         });

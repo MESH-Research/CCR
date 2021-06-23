@@ -1,6 +1,3 @@
-// This is just an example,
-// so you can safely delete all default props below
-
 export default {
   user: {
     self: "No users | User | Users",
@@ -17,7 +14,22 @@ export default {
   },
   buttons: {
     more_info: "More Info",
-    dashboard: "Dashboard"
+    dashboard: "Dashboard",
+    add: "Add",
+    save: "Save",
+    saving: "Saving",
+    saved: "Saved",
+    discard_changes: "Discard Changes"
+  },
+  lists: {
+    move_up: 'Move {0} Up',
+    move_down: 'Move {0} Down',
+    delete: 'Delete {0}',
+    edit: 'Edit {0}',
+    save: 'Save',
+    add: 'Add',
+    new: 'Add {0}',
+    default_item_name: 'Item'
   },
   auth: {
     loginRequired: "You need to login to access that page.",
@@ -72,6 +84,7 @@ export default {
     publications: "Publications",
     user_list: "All Users",
     account_link: "My Account",
+    profile_link: "My Profile",
     dashboard: "My Dashboard",
     menu_button_aria: "Show/hide navigation sidebar"
   },
@@ -99,6 +112,29 @@ export default {
       update_form_validation: "Please correct errors and try again.",
       update_form_internal: "Error processing result. Please try again later.",
       unknown: "An unexpected error occurred while updating.",
+    },
+    profile: {
+      section_personal: "Personal Details",
+      section_biography: "Biography",
+      section_social_media: "Social Media Profiles",
+      section_academic_profiles: "Academic Profiles",
+      section_websites: "Websites",
+      section_keywords: "Keywords",
+      fields: {
+        professional_title: "Professional Title",
+        specialization: "Specialization",
+        specialization_hint: "Area of expertise, specialization or research focus.",
+        affiliation: "Affiliation",
+        affiliation_hint: "Institutional, group, or organization affiliation.",
+        biography: "@:account.profile.section_biography",
+        website: "Website",
+        interest_keyword: "Interest Keyword",
+        interest_keyword_hint: "Interest keywords will be used to help provide suggestions for submissions which may be of interest to you.",
+        disinterest_keyword: "Disinterest Keyword",
+        disinterest_keyword_hint: "Disinterest keywords will be used to help filter suggestions for submissions that are not of interest to you."
+
+
+      },
     },
 
     header: "My Account",

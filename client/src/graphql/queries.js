@@ -8,6 +8,27 @@ export const CURRENT_USER = gql`
       name
       email
       email_verified_at
+      profile_metadata {
+        academic_profiles {
+          orcid_id
+          humanities_commons
+          academia_edu_id
+        }
+        biography
+        professional_title
+        specialization
+        affiliation
+        websites
+        interest_keywords
+        disinterest_keywords
+        social_media {
+          google
+          twitter
+          instagram
+          facebook
+          linkedin
+        }
+      }
       roles {
         name
       }
